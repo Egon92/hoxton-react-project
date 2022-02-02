@@ -1,10 +1,6 @@
-import { useState } from "react";
-
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <header className="header">
@@ -32,25 +28,17 @@ function App() {
           <li>Contact Us</li>
         </nav>
       </header>
-      <main>
-        <div className="top-main"></div>
+      <main className="main">
+        <div className="top-main">
+          <img src="" alt="" />
+        </div>
         <div className="bottom-main">
-          <div className="asside"></div>
+          <div className="asside">
+            <div className="product-groups"></div>
+            <div className="featured-list"></div>
+            <div className="contact-manager"></div>
+          </div>
           <div className="products">
-            <div className="product">
-              <img
-                className="product-image"
-                src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                alt=""
-              />
-              <div className="product-info">
-                <p className="product-description">
-                  Smooth Abrasion Resistant PVC Faux Leather
-                </p>
-                <p className="product-price">US $1.5-2.5</p>
-              </div>
-              <button>Contact Now</button>
-            </div>
             <div className="product">
               <img
                 className="product-image"

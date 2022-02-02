@@ -80,3 +80,49 @@
   font-weight: 600;
   color: white;
 }
+.main {
+  display: grid;
+  grid-template-rows: 630px 1fr;
+  width: 100%;
+  gap: 20px;
+}
+.top-main {
+  display: grid;
+  place-content: center;
+  align-self: start;
+}
+.top-main img {
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+.bottom-main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 10px;
+}
+.asside {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  width: 100%;
+  gap: 10px;
+}
+.products {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  gap: 4rem;
+  width: 1fr;
+  place-content: start;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+.product {
+  display: grid;
+  place-content: center;
+  width: 300px;
+}
+.product-image {
+  display: grid;
+  width: 100%;
+}
