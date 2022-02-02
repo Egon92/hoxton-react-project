@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "description": "product description",
+      "name": "product name",
+      "price": 3
+    },
+    {
+      "id": 2,
+      "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "description": "product description",
+      "name": "product name",
+      "price": 3
+    },
+    {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "description": "product description",
+      "name": "product name",
+      "price": 3
+    },
+    {
+      "id": 4,
+      "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "description": "product description",
+      "name": "product name",
+      "price": 3
+    },
+    {
+      "id": 5,
+      "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "description": "product description",
+      "name": "product name",
+      "price": 3
+    },
+    {
+      "id": 6,
+      "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "description": "product description",
+      "name": "product name",
+      "price": 3
+    }
+  ]
+}
