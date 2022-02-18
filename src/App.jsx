@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import CartModal from "./components/CartModal";
 import Main from "./pages/Main";
-import { Product } from "./pages/Product";
+import Product from "./pages/Product";
 
 function App() {
+  const [modal, setModal] = useState(false);
+
   return (
     <div className="App">
       <header className="header">
@@ -20,6 +24,9 @@ function App() {
               <div className="search-icon">
                 <img src="/assets/search_white_24dp.svg" alt="" />
               </div>
+              <div className="basket">
+                <button onClick={() => setModal(true)}>🛒</button>
+              </div>
             </div>
           </div>
         </div>
@@ -33,9 +40,11 @@ function App() {
       </header>
       <Routes>
         <Route index element={<Main />} />
-        <Route path="/product/:productId" element={<Product />} />
+        <Route path="/products/:productId" element={<Product />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>
+
+      {modal ? <CartModal setModal={setModal} /> : null}
 
       <footer className="footer">
         <div className="footer-products">
