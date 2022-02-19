@@ -24,8 +24,13 @@ function App() {
               <div className="search-icon">
                 <img src="/assets/search_white_24dp.svg" alt="" />
               </div>
-              <div className="basket">
-                <button onClick={() => setModal(true)}>🛒</button>
+              <div className="search-basket">
+                <button
+                  className="search-basket-button"
+                  onClick={() => setModal(true)}
+                >
+                  🛒
+                </button>
               </div>
             </div>
           </div>
@@ -39,7 +44,7 @@ function App() {
         </nav>
       </header>
       <Routes>
-        <Route index element={<Main />} />
+        <Route index element={<Main setModal={setModal} />} />
         <Route path="/products/:productId" element={<Product />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>

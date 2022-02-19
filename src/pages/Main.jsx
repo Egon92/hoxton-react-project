@@ -1,4 +1,6 @@
-export default function Main() {
+import "./Main.css";
+
+export default function Main(props) {
   return (
     <main className="main">
       <div className="top-main">
@@ -60,7 +62,15 @@ export default function Main() {
               </p>
               <p className="product-price">US $1.5-2.5</p>
             </div>
-            <button>Contact Now</button>
+            <div className="product-buttons">
+              <button className="contact-now-button">Contact Now</button>
+              <button
+                className="product-basket-button"
+                onClick={() => props.setModal(true)}
+              >
+                🛒
+              </button>
+            </div>
           </div>
           <div className="product">
             <img
@@ -74,7 +84,15 @@ export default function Main() {
               </p>
               <p className="product-price">US $1.5-2.5</p>
             </div>
-            <button>Contact Now</button>
+            <div className="product-buttons">
+              <button className="contact-now-button">Contact Now</button>
+              <button
+                className="product-basket-button"
+                onClick={() => props.setModal(true)}
+              >
+                🛒
+              </button>
+            </div>
           </div>
           <div className="product">
             <img
@@ -88,7 +106,15 @@ export default function Main() {
               </p>
               <p className="product-price">US $1.5-2.5</p>
             </div>
-            <button>Contact Now</button>
+            <div className="product-buttons">
+              <button className="contact-now-button">Contact Now</button>
+              <button
+                className="product-basket-button"
+                onClick={() => props.setModal(true)}
+              >
+                🛒
+              </button>
+            </div>
           </div>
           <div className="product">
             <img
@@ -102,7 +128,15 @@ export default function Main() {
               </p>
               <p className="product-price">US $1.5-2.5</p>
             </div>
-            <button>Contact Now</button>
+            <div className="product-buttons">
+              <button className="contact-now-button">Contact Now</button>
+              <button
+                className="product-basket-button"
+                onClick={() => props.setModal(true)}
+              >
+                🛒
+              </button>
+            </div>
           </div>
           <div className="product">
             <img
@@ -116,7 +150,15 @@ export default function Main() {
               </p>
               <p className="product-price">US $1.5-2.5</p>
             </div>
-            <button>Contact Now</button>
+            <div className="product-buttons">
+              <button className="contact-now-button">Contact Now</button>
+              <button
+                className="product-basket-button"
+                onClick={() => props.setModal(true)}
+              >
+                🛒
+              </button>
+            </div>
           </div>
           <div className="product">
             <img
@@ -130,7 +172,15 @@ export default function Main() {
               </p>
               <p className="product-price">US $1.5-2.5</p>
             </div>
-            <button>Contact Now</button>
+            <div className="product-buttons">
+              <button className="contact-now-button">Contact Now</button>
+              <button
+                className="product-basket-button"
+                onClick={() => props.setModal(true)}
+              >
+                🛒
+              </button>
+            </div>
           </div>
         </div>
       </div>
