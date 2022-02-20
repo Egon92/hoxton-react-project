@@ -11,7 +11,7 @@
 }
 .modal {
   display: grid;
-  gap: 5px;
+  gap: 1.5rem;
   background-color: whitesmoke;
   padding: 1rem;
   border-radius: 2px;
@@ -52,7 +52,7 @@
 }
 .cart-psp {
   display: grid;
-  gap: 7px;
+  gap: 2rem;
 }
 .product-features {
   display: grid;
@@ -61,7 +61,7 @@
 }
 #product-name {
   display: grid;
-  justify-items: start;
+  justify-content: space-around;
   font-size: 14px;
   font-weight: 500;
 }
@@ -70,7 +70,8 @@
   grid-template-columns: repeat(2, auto);
   gap: 1rem;
   display: grid;
-  place-items: center;
+  align-items: center;
+  place-content: center space-around;
 }
 #stock-number {
   color: rgb(15, 141, 46);
@@ -98,7 +99,7 @@
   display: grid;
   place-content: center;
   height: 50px;
-  width: 350px;
+  width: 450px;
   background-color: rgb(255, 0, 0);
   color: white;
   border-radius: 5px;
@@ -119,7 +120,7 @@
   display: grid;
   place-content: center;
   height: 50px;
-  width: 350px;
+  width: 450px;
   background-color: rgb(15, 141, 46);
   color: white;
   border-radius: 5px;
