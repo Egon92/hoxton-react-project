@@ -1,4 +1,5 @@
 import "./Main.css";
+import Product from "./Product";
 
 export default function Main(props) {
   return (
@@ -52,6 +53,7 @@ export default function Main(props) {
         <div className="products">
           <div className="product">
             <img
+              onClick={() => props.setRoute(<Product />)}
               className="product-image"
               src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
               alt=""

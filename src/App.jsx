@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 
 function App() {
   const [modal, setModal] = useState(false);
+  const [route, setRoute] = useState(<Main />);
 
   return (
     <div className="App">
@@ -36,7 +37,7 @@ function App() {
           </div>
         </div>
         <nav className="nav-bar">
-          <li>Home</li>
+          <li onClick={() => setRoute(<Main />)}>Home</li>
           <li>Products</li>
           <li>About Us</li>
           <li>Solutions</li>
@@ -44,7 +45,10 @@ function App() {
         </nav>
       </header>
       <Routes>
-        <Route index element={<Main setModal={setModal} />} />
+        <Route
+          index
+          element={<Main setModal={setModal} setRoute={setRoute} />}
+        />
         <Route path="/:productId" element={<Product />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>

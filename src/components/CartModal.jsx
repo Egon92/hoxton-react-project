@@ -11,11 +11,11 @@ export default function CartModal(props) {
         </div>
         <div id="modal">
           <div className="top-section">
-            <div className="cart-image">
-              <img
+            <div className="cart-image-wrapper">
+              {/* <img
                 src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
                 alt=""
-              />
+              /> */}
             </div>
             <div className="cart-psp">
               <p className="product-features" id="product-name">
