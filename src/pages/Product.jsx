@@ -1,22 +1,26 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./Product.css";
 
 export default function Product() {
+  const [product, setProduct] = useState(null);
+  const params = useParams();
+  useEffect(() => {
+    fetch(`http://localhost:3000/products/${params.productId}`)
+      .then((resp) => resp.json())
+      .then((product) => setProduct(product));
+  }, []);
+  if (product === null) return <h1>Page loading...</h1>;
+
   return (
     <main className="product-main">
       <div className="product-left-main">
         <div className="top-left">
           <div className="top-product-image">
-            <img
-              id="top-product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
+            <img id="top-product-image" src={product.image} alt="" />
           </div>
           <div className="left-product-specificity">
-            <div id="product-name">
-              Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-              for Car Accessory Interior
-            </div>
+            <div id="product-name">{product.name}</div>
             <div id="product-pql">
               US $1.5-2.5 / Meter | 500 Meters (Min. Order)
             </div>

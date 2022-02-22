@@ -18,6 +18,9 @@
   display: grid;
   width: 100%;
 }
+.product-image:hover {
+  cursor: pointer;
+}
 .product-price {
   display: grid;
   justify-content: center;
@@ -36,6 +39,9 @@
   color: whitesmoke;
   font-weight: 700;
   padding: 2px 10px;
+}
+.contact-now-button:hover {
+  cursor: pointer;
 }
 .product-basket-button {
   display: grid;

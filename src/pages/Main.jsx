@@ -1,7 +1,15 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Main.css";
 import Product from "./Product";
 
 export default function Main(props) {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((resp) => resp.json())
+      .then((products) => setProducts(products));
+  }, []);
   return (
     <main className="main">
       <div className="top-main">
@@ -51,139 +59,32 @@ export default function Main(props) {
           </div>
         </div>
         <div className="products">
-          <div className="product">
-            <img
-              onClick={() => props.setRoute(<Product />)}
-              className="product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
-            <div className="product-info">
-              <p className="product-description">
-                Smooth Abrasion Resistant PVC Faux Leather
-              </p>
-              <p className="product-price">US $1.5-2.5</p>
+          {products.map((product) => (
+            <div className="product">
+              <Link to={`/${product.id}`}>
+                <img
+                  className="product-image"
+                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+                  alt=""
+                />
+              </Link>
+              <div className="product-info">
+                <p className="product-description">
+                  Smooth Abrasion Resistant PVC Faux Leather
+                </p>
+                <p className="product-price">US $1.5-2.5</p>
+              </div>
+              <div className="product-buttons">
+                <button className="contact-now-button">Contact Now</button>
+                <button
+                  className="product-basket-button"
+                  onClick={() => props.setModal(true)}
+                >
+                  🛒
+                </button>
+              </div>
             </div>
-            <div className="product-buttons">
-              <button className="contact-now-button">Contact Now</button>
-              <button
-                className="product-basket-button"
-                onClick={() => props.setModal(true)}
-              >
-                🛒
-              </button>
-            </div>
-          </div>
-          <div className="product">
-            <img
-              className="product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
-            <div className="product-info">
-              <p className="product-description">
-                Smooth Abrasion Resistant PVC Faux Leather
-              </p>
-              <p className="product-price">US $1.5-2.5</p>
-            </div>
-            <div className="product-buttons">
-              <button className="contact-now-button">Contact Now</button>
-              <button
-                className="product-basket-button"
-                onClick={() => props.setModal(true)}
-              >
-                🛒
-              </button>
-            </div>
-          </div>
-          <div className="product">
-            <img
-              className="product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
-            <div className="product-info">
-              <p className="product-description">
-                Smooth Abrasion Resistant PVC Faux Leather
-              </p>
-              <p className="product-price">US $1.5-2.5</p>
-            </div>
-            <div className="product-buttons">
-              <button className="contact-now-button">Contact Now</button>
-              <button
-                className="product-basket-button"
-                onClick={() => props.setModal(true)}
-              >
-                🛒
-              </button>
-            </div>
-          </div>
-          <div className="product">
-            <img
-              className="product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
-            <div className="product-info">
-              <p className="product-description">
-                Smooth Abrasion Resistant PVC Faux Leather
-              </p>
-              <p className="product-price">US $1.5-2.5</p>
-            </div>
-            <div className="product-buttons">
-              <button className="contact-now-button">Contact Now</button>
-              <button
-                className="product-basket-button"
-                onClick={() => props.setModal(true)}
-              >
-                🛒
-              </button>
-            </div>
-          </div>
-          <div className="product">
-            <img
-              className="product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
-            <div className="product-info">
-              <p className="product-description">
-                Smooth Abrasion Resistant PVC Faux Leather
-              </p>
-              <p className="product-price">US $1.5-2.5</p>
-            </div>
-            <div className="product-buttons">
-              <button className="contact-now-button">Contact Now</button>
-              <button
-                className="product-basket-button"
-                onClick={() => props.setModal(true)}
-              >
-                🛒
-              </button>
-            </div>
-          </div>
-          <div className="product">
-            <img
-              className="product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
-            <div className="product-info">
-              <p className="product-description">
-                Smooth Abrasion Resistant PVC Faux Leather
-              </p>
-              <p className="product-price">US $1.5-2.5</p>
-            </div>
-            <div className="product-buttons">
-              <button className="contact-now-button">Contact Now</button>
-              <button
-                className="product-basket-button"
-                onClick={() => props.setModal(true)}
-              >
-                🛒
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </main>

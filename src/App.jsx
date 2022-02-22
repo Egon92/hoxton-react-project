@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import CartModal from "./components/CartModal";
 import Main from "./pages/Main";
@@ -7,7 +7,6 @@ import Product from "./pages/Product";
 
 function App() {
   const [modal, setModal] = useState(false);
-  const [route, setRoute] = useState(<Main />);
 
   return (
     <div className="App">
@@ -37,7 +36,10 @@ function App() {
           </div>
         </div>
         <nav className="nav-bar">
-          <li onClick={() => setRoute(<Main />)}>Home</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+
           <li>Products</li>
           <li>About Us</li>
           <li>Solutions</li>
@@ -45,10 +47,7 @@ function App() {
         </nav>
       </header>
       <Routes>
-        <Route
-          index
-          element={<Main setModal={setModal} setRoute={setRoute} />}
-        />
+        <Route index element={<Main setModal={setModal} />} />
         <Route path="/:productId" element={<Product />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>
