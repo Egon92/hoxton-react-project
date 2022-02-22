@@ -187,6 +187,9 @@ body {
   width: 242px;
   height: 40px;
 }
+.send-button:hover {
+  cursor: pointer;
+}
 .footer {
   margin-top: 50px;
   background-color: #e3e4e6;

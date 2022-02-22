@@ -4,18 +4,19 @@
   box-sizing: border-box;
   /* outline: solid black 1px; */
 }
-.main {
+.product-main {
   display: grid;
   grid-template-columns: 1fr auto;
   width: 100%;
+  gap: 1rem;
 }
-.left-main {
+.product-left-main {
   display: grid;
   grid-template-rows: repeat(2, auto);
   gap: 1rem;
   width: 1fr;
 }
-.right-main {
+.product-right-main {
   display: grid;
   grid-template-rows: repeat(2, auto);
   width: 200px;
@@ -96,6 +97,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   outline: solid black 1px;
+  width: 995px;
+  margin-left: 1rem;
 }
 .product-descriptions-left-tab {
   display: grid;
@@ -140,14 +143,14 @@
   width: 200px;
   background-color: #f5f7fa;
 }
-.contact-manager {
+.product-contact-manager {
   display: grid;
   align-content: start;
   height: 50px;
   position: relative;
-  bottom: 40px;
+  bottom: 10px;
 }
-.contact-manager p {
+.product-contact-manager p {
   display: grid;
   height: 50px;
   align-content: center;
@@ -155,10 +158,10 @@
   padding-left: 5px;
   font-size: 20px;
 }
-.manager-pic-name {
+.product-manager-pic-name {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  justify-content: start;
+  justify-content: center;
   align-content: center;
   position: relative;
   bottom: 20px;
@@ -194,6 +197,9 @@
   height: 50px;
   background-color: red;
   border-radius: 5px;
+}
+#manager-send-button:hover {
+  cursor: pointer;
 }
 #manager-send-button p {
   display: grid;

@@ -45,7 +45,7 @@ function App() {
       </header>
       <Routes>
         <Route index element={<Main setModal={setModal} />} />
-        <Route path="/products/:productId" element={<Product />} />
+        <Route path="/:productId" element={<Product />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>
 

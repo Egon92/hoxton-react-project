@@ -11,7 +11,7 @@
 }
 .modal {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   background-color: whitesmoke;
   padding: 1rem;
   border-radius: 2px;
@@ -32,38 +32,39 @@
 }
 #modal {
   display: grid;
-  gap: 3rem;
+  gap: 4rem;
   width: 450px;
 }
 .top-section {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  height: 200px;
+  height: 250px;
 }
 .cart-image {
   display: grid;
-  place-content: center;
+  place-content: start;
   width: 300px;
 }
 .cart-image img {
   display: grid;
-  width: 100%;
+  width: 90%;
   border-radius: 5px;
 }
 .cart-psp {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .product-features {
   display: grid;
-  place-content: center;
-  font-weight: 700;
+  /* place-content: center; */
+  font-weight: 300;
 }
 #product-name {
-  display: grid;
-  justify-content: space-around;
-  font-size: 14px;
-  font-weight: 500;
+  /* justify-content: space-around; */
+  text-align: start;
+  font-size: 13px;
+  position: relative;
+  bottom: 15px;
 }
 #product-features-stock {
   display: grid;
@@ -72,10 +73,12 @@
   display: grid;
   align-items: center;
   place-content: center space-around;
+  font-size: 16px;
 }
 #stock-number {
   color: rgb(15, 141, 46);
   font-size: 20px;
+  font-weight: 700;
   border: solid rgba(0, 0, 0, 0.137) 1px;
   display: grid;
   place-content: center;
@@ -83,8 +86,11 @@
   border-radius: 2px;
 }
 #price {
+  display: grid;
+  place-content: center;
   color: red;
   font-size: 17px;
+  font-weight: 550;
 }
 .bottom-section {
   display: grid;
@@ -110,6 +116,7 @@
 .buy-button:hover {
   transform: scale(1.02);
   transition: 0.3s;
+  cursor: pointer;
 }
 .add-button-wrapper {
   display: grid;
@@ -131,4 +138,5 @@
 .add-button:hover {
   transform: scale(1.02);
   transition: 0.3s;
+  cursor: pointer;
 }

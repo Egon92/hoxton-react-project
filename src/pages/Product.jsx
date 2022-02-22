@@ -2,8 +2,8 @@ import "./Product.css";
 
 export default function Product() {
   return (
-    <main className="main">
-      <div className="left-main">
+    <main className="product-main">
+      <div className="product-left-main">
         <div className="top-left">
           <div className="top-product-image">
             <img
@@ -100,12 +100,12 @@ export default function Product() {
           </div>
         </div>
       </div>
-      <div className="right-main">
+      <div className="product-right-main">
         <div className="top-right">
-          <div className="contact-manager">
+          <div className="product-contact-manager">
             <p>Contact manager</p>
           </div>
-          <div className="manager-pic-name">
+          <div className="product-manager-pic-name">
             <div id="manager-pic">
               <img src="../assets/account_circle_black_24dp.svg" alt="" />
             </div>
