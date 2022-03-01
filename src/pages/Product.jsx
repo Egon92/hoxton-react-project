@@ -27,38 +27,35 @@ export default function Product() {
             <div id="product-availability">
               <div className="product-features">
                 <p className="key">Thickness:</p>
-                <p className="value">0.6~1.2</p>
+                <p className="value">{product.thickness}</p>
               </div>
               <div className="product-features">
                 <p className="key">Usage:</p>
-                <p className="value">
-                  Bag, Shoes, Furniture, Decorative, Car Seat, Home Textile,
-                  Gloves, Notebook, Belt
-                </p>
+                <p className="value">{product.usage}</p>
               </div>
               <div className="product-features">
                 <p className="key">Feature:</p>
-                <p className="value">Abrasion Resistant, Soft</p>
+                <p className="value">{product.feature}</p>
               </div>
               <div className="product-features">
                 <p className="key">Width:</p>
-                <p className="value">54/55"</p>
+                <p className="value">{product.width}</p>
               </div>
               <div className="product-features">
                 <p className="key">Pattern:</p>
-                <p className="value">Embossed</p>
+                <p className="value">{product.pattern}</p>
               </div>
               <div className="product-features">
                 <p className="key">Material:</p>
-                <p className="value">PVC</p>
+                <p className="value">{product.material}</p>
               </div>
               <div className="product-features">
                 <p className="key">Samples:</p>
-                <p className="value">US$ 15/Meter 1 Meter(Min.Order)</p>
+                <p className="value">{product.samples}</p>
               </div>
               <div className="product-features">
                 <p className="key">Customization:</p>
-                <p className="value">Available</p>
+                <p className="value">{product.customization}</p>
               </div>
             </div>
           </div>
@@ -72,27 +69,22 @@ export default function Product() {
               <p className="left-tab-feature">Material:</p>
               <p className="left-tab-feature">MOQ:</p>
               <p className="left-tab-feature">Technology:</p>
-              <p className="left-tab-feature">Customize Logo:</p>
-              <p className="left-tab-feature">Customize Size/shape</p>
-              <p className="left-tab-feature">Sample Charge:</p>
-              <p className="left-tab-feature">Sample time:</p>
+              <p className="left-tab-feature">Logo:</p>
+              <p className="left-tab-feature">Size:</p>
+              <p className="left-tab-feature">Charge:</p>
+              <p className="left-tab-feature">Time:</p>
             </div>
             <div className="product-descriptions-right-tab">
               <p className="right-tab-info">Fashion and home decoration</p>
-              <p className="right-tab-info">Polyvinylchlorid</p>
-              <p className="right-tab-info">500 meters</p>
-              <p className="right-tab-info">embossed</p>
-              <p className="right-tab-info">
-                Print,debossed,and embroidery is welcome.
-              </p>
-              <p className="right-tab-info">
-                It can be made by any size and any shape.
-              </p>
+              <p className="right-tab-info">{product.material}</p>
+              <p className="right-tab-info">{product.MOQ}</p>
+              <p className="right-tab-info">{product.technology}</p>
+              <p className="right-tab-info">{product.logo}</p>
+              <p className="right-tab-info">{product.size}</p>
               <p className="right-tab-info" id="right-tab-info-price">
-                15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight
-                around 1kg)
+                {product.charge}
               </p>
-              <p className="right-tab-info">3-5 working days</p>
+              <p className="right-tab-info">{product.time}</p>
             </div>
           </div>
           <div className="bottom-product-image">

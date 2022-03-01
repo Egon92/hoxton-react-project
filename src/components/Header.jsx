@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import About from "./About";
 
 export default function Header(props) {
   return (
@@ -33,7 +34,9 @@ export default function Header(props) {
         </li>
 
         <li>Products</li>
-        <li>About Us</li>
+        <li>
+          <Link to="/about">About Us</Link>
+        </li>
         <li>Solutions</li>
         <li>Contact Us</li>
       </nav>

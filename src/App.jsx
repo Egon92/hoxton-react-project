@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import About from "./components/About";
 import CartModal from "./components/CartModal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -17,6 +18,7 @@ function App() {
         <Route index element={<Main setModal={setModal} />} />
         <Route path="/:productId" element={<Product />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
+        <Route path="/about" element={<About />} />
       </Routes>
 
       {modal ? <CartModal setModal={setModal} /> : null}

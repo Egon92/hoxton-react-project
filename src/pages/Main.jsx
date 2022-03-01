@@ -62,17 +62,11 @@ export default function Main(props) {
           {products.map((product) => (
             <div className="product">
               <Link to={`/${product.id}`}>
-                <img
-                  className="product-image"
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
+                <img className="product-image" src={product.image} alt="" />
               </Link>
               <div className="product-info">
-                <p className="product-description">
-                  Smooth Abrasion Resistant PVC Faux Leather
-                </p>
-                <p className="product-price">US $1.5-2.5</p>
+                <p className="product-description">{product.name}</p>
+                <p className="product-price">{product.price}</p>
               </div>
               <div className="product-buttons">
                 <button className="contact-now-button">Contact Now</button>
