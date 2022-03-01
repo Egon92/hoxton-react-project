@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, Link, useParams } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import CartModal from "./components/CartModal";
@@ -10,6 +10,8 @@ import Product from "./pages/Product";
 
 function App() {
   const [modal, setModal] = useState(false);
+
+  const params = useParams();
 
   return (
     <div className="App">

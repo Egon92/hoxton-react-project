@@ -15,10 +15,11 @@
       "customization": "Available",
       "MOQ": "500 meters",
       "technology": "embossed",
-      "Customize Logo": "Print,debossed,and embroidery is welcome.",
-      "Customize Size": "It can be made by any size and any shape.",
-      "Sample Charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "Sample time": "3-5 working days"
+      "logo": "Print,debossed,and embroidery is welcome.",
+      "size": "It can be made by any size and any shape.",
+      "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
+      "time": "3-5 working days",
+      "stock": 5
     },
     {
       "id": 2,
@@ -32,7 +33,8 @@
       "pattern": "Embossed",
       "material": "PVC",
       "samples": "US$ 5/Meter 1 Meter(Min.Order)",
-      "customization": "Available"
+      "customization": "Available",
+      "stock": 3
     },
     {
       "id": 3,
@@ -49,10 +51,11 @@
       "customization": "Available",
       "MOQ": "500 meters",
       "technology": "embossed",
-      "Customize Logo": "Print,debossed,and embroidery is welcome.",
-      "Customize Size": "It can be made by any size and any shape.",
-      "Sample Charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "Sample time": "3-5 working days"
+      "logo": "Print,debossed,and embroidery is welcome.",
+      "size": "It can be made by any size and any shape.",
+      "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
+      "time": "3-5 working days",
+      "stock": 2
     },
     {
       "id": 4,
@@ -72,13 +75,14 @@
       "logo": "Print,debossed,and embroidery is welcome.",
       "size": "It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 10
     },
     {
       "id": 5,
       "image": "https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
       "usage": "product description",
-      "name": "product name",
+      "name": "Customized Printed Synethetic Leather",
       "price": "US $1.5-2.5 / Meter",
       "thickness": "0.6~1.2",
       "feature": "Abrasion Resistant, Soft",
@@ -90,15 +94,16 @@
       "MOQ": "500 meters",
       "technology": "embossed",
       "logo": "Print,debossed,and embroidery is welcome.",
-      "shape": " It can be made by any size and any shape.",
+      "size": " It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 4
     },
     {
       "id": 6,
       "image": "https://image.made-in-china.com/226f3j00PTziuaRBuJbt/Crocodile-Texture-Synthetic-Leather-PU-Leahter-for-Sofa.webp",
       "usage": "product description",
-      "name": "product name",
+      "name": "Customized OEM Factory Direct Price PU Faux Leather Placemat",
       "price": "US $1.5-2.5 / Meter",
       "thickness": "0.6~1.2",
       "feature": "Abrasion Resistant, Soft",
@@ -110,15 +115,16 @@
       "MOQ": "500 meters",
       "technology": "embossed",
       "logo": "Print,debossed,and embroidery is welcome.",
-      "shape": " It can be made by any size and any shape.",
+      "size": " It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 9
     },
     {
       "id": 7,
       "image": "https://image.made-in-china.com/226f3j00LtrVGgUBYwqF/R64-Synthetic-Leather-Use-for-The-Handbagss.webp",
       "usage": "product description",
-      "name": "product name",
+      "name": "Brillant Stone Synthetic Leather",
       "price": "US $1.5-2.5 / Meter",
       "thickness": "0.6~1.2",
       "feature": "Abrasion Resistant, Soft",
@@ -130,15 +136,16 @@
       "MOQ": "500 meters",
       "technology": "embossed",
       "logo": "Print,debossed,and embroidery is welcome.",
-      "shape": " It can be made by any size and any shape.",
+      "size": " It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 6
     },
     {
       "id": 8,
       "image": "https://image.made-in-china.com/226f3j00qEzVOgNfbAcY/Customized-Printed-Synethetic-Leather-in-Guangzhou.webp",
       "usage": "product description",
-      "name": "product name",
+      "name": "Fashion Manufacturer Synethetic Leather Use",
       "price": "US $1.5-2.5 / Meter",
       "thickness": "0.6~1.2",
       "feature": "Abrasion Resistant, Soft",
@@ -150,15 +157,16 @@
       "MOQ": "500 meters",
       "technology": "embossed",
       "logo": "Print,debossed,and embroidery is welcome.",
-      "shape": " It can be made by any size and any shape.",
+      "size": " It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 3
     },
     {
       "id": 9,
       "image": "https://image.made-in-china.com/226f3j00nwBIEYcSClrf/3D-Embossed-Artificial-Synthetic-PU-PVC-Leather-for-Bag-Furniture-Material.webp",
       "usage": "product description",
-      "name": "product name",
+      "name": "Debossed Customized PU PVC Leather Coaster Set",
       "price": "US $1.5-2.5 / Meter",
       "thickness": "0.6~1.2",
       "feature": "Abrasion Resistant, Soft",
@@ -170,9 +178,10 @@
       "MOQ": "500 meters",
       "technology": "embossed",
       "logo": "Print,debossed,and embroidery is welcome.",
-      "shape": " It can be made by any size and any shape.",
+      "size": " It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 5
     },
     {
       "id": 10,
@@ -190,9 +199,10 @@
       "MOQ": "500 meters",
       "technology": "embossed",
       "logo": "Print,debossed,and embroidery is welcome.",
-      "shape": " It can be made by any size and any shape.",
+      "size": " It can be made by any size and any shape.",
       "charge": "15 USD per set, 35-50 usd for DHL/FEDEX shipping cost(weight around 1kg)",
-      "time": "3-5 working days"
+      "time": "3-5 working days",
+      "stock": 4
     }
   ]
 }

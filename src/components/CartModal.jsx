@@ -1,6 +1,19 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 import "./CartModal.css";
 
 export default function CartModal(props) {
+  const [product, setProduct] = useState(null);
+  const params = useParams();
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/products/${params.productId}`)
+      .then((resp) => resp.json())
+      .then((product) => setProduct(product));
+  }, []);
+  if (product === null) return <h1>Page loading...</h1>;
+
   return (
     <div className="modal-wrapper">
       <div className="modal">
@@ -9,6 +22,7 @@ export default function CartModal(props) {
             <img src="../assets/close_white_24dp.svg" alt="" />
           </button>
         </div>
+
         <div id="modal">
           <div className="top-section">
             <div className="cart-image-wrapper">
@@ -19,15 +33,14 @@ export default function CartModal(props) {
             </div>
             <div className="cart-psp">
               <p className="product-features" id="product-name">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
+                {product.name}
               </p>
               <p className="product-features" id="product-features-stock">
                 <span id="stock">Stock:</span>
-                <span id="stock-number">3</span>
+                <span id="stock-number">{product.stock}</span>
               </p>
               <p className="product-features" id="price">
-                US$ 15/Meter
+                {product.price}
               </p>
             </div>
           </div>

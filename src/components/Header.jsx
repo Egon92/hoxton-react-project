@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import About from "./About";
+import "./Header.css";
 
 export default function Header(props) {
   return (
     <header className="header">
       <div className="top-header">
         <div className="logo">
-          <img src="/assets/leather.png" alt="" />
+          <Link to="/">
+            <img src="/assets/leather.png" alt="" />
+          </Link>
         </div>
         <div className="right-header">
           <div className="company-name">Leather company Ltd.</div>

@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Product.css";
 
 export default function Product() {
   const [product, setProduct] = useState(null);
+  const [otherProducts, setOtherProducts] = useState([]);
   const params = useParams();
   useEffect(() => {
     fetch(`http://localhost:3000/products/${params.productId}`)
       .then((resp) => resp.json())
       .then((product) => setProduct(product));
+  }, []);
+  useEffect(() => {
+    fetch(`http://localhost:3000/products`)
+      .then((resp) => resp.json())
+      .then((otherProducts) => setOtherProducts(otherProducts));
   }, []);
   if (product === null) return <h1>Page loading...</h1>;
 
@@ -88,11 +94,7 @@ export default function Product() {
             </div>
           </div>
           <div className="bottom-product-image">
-            <img
-              id="bottom-product-image"
-              src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-              alt=""
-            />
+            <img id="bottom-product-image" src={product.image} alt="" />
           </div>
         </div>
       </div>
@@ -119,126 +121,18 @@ export default function Product() {
             <p>YOU MIGHT ALSO LIKE:</p>
           </div>
           <div className="bottom-right-products">
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
+            {otherProducts.map((product) => (
+              <div className="bottom-right-product">
+                <div className="bottom-right-product-img">
+                  <Link to="/:productId">
+                    <img src={product.image} alt="" />
+                  </Link>
+                </div>
+                <div className="bottom-right-product-description">
+                  {product.name}
+                </div>
               </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
-            <div className="bottom-right-product">
-              <div className="bottom-right-product-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="bottom-right-product-description">
-                Smooth Abrasion Resistant PVC Faux Leather Vinyl Leather Fabric
-                for Car Accessory Interior
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
