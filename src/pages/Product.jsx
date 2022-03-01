@@ -10,12 +10,13 @@ export default function Product() {
     fetch(`http://localhost:3000/products/${params.productId}`)
       .then((resp) => resp.json())
       .then((product) => setProduct(product));
-  }, []);
+  }, [params.productId]);
   useEffect(() => {
     fetch(`http://localhost:3000/products`)
       .then((resp) => resp.json())
       .then((otherProducts) => setOtherProducts(otherProducts));
   }, []);
+
   if (product === null) return <h1>Page loading...</h1>;
 
   return (
@@ -124,7 +125,7 @@ export default function Product() {
             {otherProducts.map((product) => (
               <div className="bottom-right-product">
                 <div className="bottom-right-product-img">
-                  <Link to="/:productId">
+                  <Link to={`/${product.id}`}>
                     <img src={product.image} alt="" />
                   </Link>
                 </div>
